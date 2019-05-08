@@ -27,8 +27,8 @@ https://www.youtube.com/watch?v=bGz7mv2vD6g
 
 ## Index
 # Controls
-- /player for human game.. use SPACE_BAR for jump
-- use / for Machine Learning
+- player for human game.. use SPACE_BAR for jump
+- use F5 to reset simulation for Machine Learning
 
 #ScreenShots
  - <img src="https://github.com/HermanRas/PuppyRun_AI/blob/master/ScreenShots/game.png" alt="#PuppyRun_AI-Game">
