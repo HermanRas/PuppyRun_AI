@@ -63,15 +63,29 @@ class puppies {
     }
 
     draw() {
+        let ballDist;
+        let ph;
         let score = 0;
         for (let i = 0; i < totalPuppies; i++) {
             if (score < this.litter[i].score) {
                 score = this.litter[i].score;
             }
             this.litter[i].draw();
+            ballDist = (ball.x) - (this.litter[i].x + this.litter[i].w);
+            if (ballDist < 0) {
+                ballDist = 0;
+            }
+            ph = height - (this.litter[i].y + this.litter[i].h);
         }
-        textSize(32);
-        text('Best Score: ' + this.bestPuppyScore + '  |  Generation: ' + this.generation + '  |  # Score:  ' + score, 10, 30);
+        textSize(24);
+
+        text(
+            ' Best: ' + this.bestPuppyScore +
+            ' Generation: ' + this.generation +
+            ' Score: ' + score +
+            '\r\n ball dist: ' + (ballDist / 1000) +
+            '\r\n puppy height ' + (ph / 1000)
+            , 10, 30);
         this.counter++;
     }
 
